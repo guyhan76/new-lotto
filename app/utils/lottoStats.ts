@@ -152,16 +152,22 @@ export async function fetchLottoHistory(): Promise<LottoResult[]> {
   try {
     const response = await fetch('/api/lottoHistory');
     if (!response.ok) {
-      throw new Error('Failed to fetch lottery history');
+      console.log('API 호출 실패, 기본 데이터 사용');
+      return LOTTO_HISTORY;
     }
     
     const data = await response.json();
+    if (!Array.isArray(data) || data.length === 0) {
+      console.log('유효한 데이터 없음, 기본 데이터 사용');
+      return LOTTO_HISTORY;
+    }
+
     cachedLottoHistory = data;
     lastUpdateTime = currentTime;
     return data;
   } catch (error) {
     console.error('Error fetching lottery history:', error);
-    return cachedLottoHistory || [];
+    return LOTTO_HISTORY;
   }
 }
 
