@@ -1,6 +1,18 @@
 import { NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
 
+interface LottoData {
+  drwNo: number;
+  drwtNo1: number;
+  drwtNo2: number;
+  drwtNo3: number;
+  drwtNo4: number;
+  drwtNo5: number;
+  drwtNo6: number;
+  bnusNo: number;
+  drwNoDate: string;
+}
+
 async function fetchLatestLottoNumber() {
   try {
     const response = await fetch('https://www.dhlottery.co.kr/common.do?method=getLottoNumber', {
@@ -30,11 +42,17 @@ export async function GET() {
     }
 
     // 기존 데이터 가져오기
-    let existingData = await kv.get('lottoHistory') || [];
+    const rawData = await kv.get('lottoHistory');
+    const existingData = (rawData || []) as LottoData[];
     
+    // 중복 체크를 위한 함수
+    const isDuplicate = (data: LottoData[], newNo: number) => {
+      return data.some(item => item.drwNo === newNo);
+    };
+
     // 새로운 당첨번호인 경우에만 추가
-    if (!existingData.some((data: any) => data.drwNo === latestData.drwNo)) {
-      const newData = {
+    if (!isDuplicate(existingData, latestData.drwNo)) {
+      const newData: LottoData = {
         drwNo: latestData.drwNo,
         drwtNo1: latestData.drwtNo1,
         drwtNo2: latestData.drwtNo2,
@@ -47,10 +65,10 @@ export async function GET() {
       };
 
       // 새 데이터를 배열 앞에 추가
-      existingData = [newData, ...existingData];
+      const updatedData = [newData, ...existingData];
       
       // Vercel KV에 저장
-      await kv.set('lottoHistory', existingData);
+      await kv.set('lottoHistory', updatedData);
       
       return NextResponse.json({ 
         success: true, 
