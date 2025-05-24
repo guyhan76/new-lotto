@@ -1,0 +1,34 @@
+2025-05-24 23:07:06 - Starting C:\Program Files\nodejs\node.exe  D:\cursor\node_modules\node-windows\lib\wrapper.js --file D:\cursor\server.js --scriptoptions= --log "LottoGeneratorService wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2025-05-24 23:07:06 - Started 5960
+2025-05-24 23:10:05 - Stopping lottogeneratorservice.exe
+2025-05-24 23:10:05 - ProcessKill 5960
+2025-05-24 23:10:05 - Shutdown exception
+Message:시스템을 종료하고 있습니다.
+
+Stacktrace:   위치: System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   위치: System.Management.ManagementScope.InitializeGuts(Object o)
+   위치: System.Management.ManagementScope.Initialize()
+   위치: System.Management.ManagementObjectSearcher.Initialize()
+   위치: System.Management.ManagementObjectSearcher.Get()
+   위치: winsw.WrapperService.GetChildPids(Int32 pid)
+   위치: winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   위치: winsw.WrapperService.StopIt()
+   위치: winsw.WrapperService.OnShutdown()
+2025-05-24 23:10:31 - Starting C:\Program Files\nodejs\node.exe  D:\cursor\node_modules\node-windows\lib\wrapper.js --file D:\cursor\server.js --scriptoptions= --log "LottoGeneratorService wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2025-05-24 23:10:31 - Started 5420
+2025-05-25 00:36:23 - Stopping lottogeneratorservice.exe
+2025-05-25 00:36:23 - ProcessKill 5420
+2025-05-25 00:36:23 - Shutdown exception
+Message:시스템을 종료하고 있습니다.
+
+Stacktrace:   위치: System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   위치: System.Management.ManagementScope.InitializeGuts(Object o)
+   위치: System.Management.ManagementScope.Initialize()
+   위치: System.Management.ManagementObjectSearcher.Initialize()
+   위치: System.Management.ManagementObjectSearcher.Get()
+   위치: winsw.WrapperService.GetChildPids(Int32 pid)
+   위치: winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   위치: winsw.WrapperService.StopIt()
+   위치: winsw.WrapperService.OnShutdown()
+2025-05-25 00:36:46 - Starting C:\Program Files\nodejs\node.exe  D:\cursor\node_modules\node-windows\lib\wrapper.js --file D:\cursor\server.js --scriptoptions= --log "LottoGeneratorService wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2025-05-25 00:36:46 - Started 5796

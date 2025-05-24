@@ -1,0 +1,77 @@
+Starting Next.js server...
+Building Next.js application...
+
+> lotto-generator@1.0.0 build
+> next build
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+   Generating static pages (4/6) 
+ ✓ Generating static pages (6/6) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    135 B          84.1 kB
+├ ○ /_not-found                          0 B                0 B
+├ λ /api/lotto                           0 B                0 B
+└ ○ /lotto                               135 B          84.1 kB
++ First Load JS shared by all            80.5 kB
+  ├ chunks/472-722880f35cb1affc.js       27.5 kB
+  ├ chunks/fd9d1056-37698d4de9321de7.js  51.1 kB
+  ├ chunks/main-app-68e701768e628548.js  231 B
+  └ chunks/webpack-6cd406ce7306c3e7.js   1.7 kB
+
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+Build completed successfully
+Next.js app prepared successfully
+> Server ready on http://localhost:3000
+Starting Next.js server...
+Building Next.js application...
+
+> lotto-generator@1.0.0 build
+> next build
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+   Generating static pages (4/6) 
+ ✓ Generating static pages (6/6) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    135 B          84.1 kB
+├ ○ /_not-found                          0 B                0 B
+├ λ /api/lotto                           0 B                0 B
+└ ○ /lotto                               135 B          84.1 kB
++ First Load JS shared by all            80.5 kB
+  ├ chunks/472-722880f35cb1affc.js       27.5 kB
+  ├ chunks/fd9d1056-37698d4de9321de7.js  51.1 kB
+  ├ chunks/main-app-68e701768e628548.js  231 B
+  └ chunks/webpack-6cd406ce7306c3e7.js   1.7 kB
+
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+Build completed successfully
+Next.js app prepared successfully
+> Server ready on http://localhost:3000

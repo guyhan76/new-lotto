@@ -1,0 +1,56 @@
+npm notice
+npm notice New major version of npm available! 10.9.2 -> 11.4.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.1
+npm notice To update run: npm install -g npm@11.4.1
+npm notice
+node:internal/fs/promises:633
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open 'D:\cursor\.next\BUILD_ID'
+    at async open (node:internal/fs/promises:633:25)
+    at async Object.readFile (node:internal/fs/promises:1237:14)
+    at async setupFsCheck (D:\cursor\node_modules\next\dist\server\lib\router-utils\filesystem.js:145:19)
+    at async initialize (D:\cursor\node_modules\next\dist\server\lib\router-server.js:56:23)
+    at async NextCustomServer.prepare (D:\cursor\node_modules\next\dist\server\next.js:240:28) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\cursor\\.next\\BUILD_ID'
+}
+
+Node.js v22.16.0
+node:internal/fs/promises:633
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open 'D:\cursor\.next\BUILD_ID'
+    at async open (node:internal/fs/promises:633:25)
+    at async Object.readFile (node:internal/fs/promises:1237:14)
+    at async setupFsCheck (D:\cursor\node_modules\next\dist\server\lib\router-utils\filesystem.js:145:19)
+    at async initialize (D:\cursor\node_modules\next\dist\server\lib\router-server.js:56:23)
+    at async NextCustomServer.prepare (D:\cursor\node_modules\next\dist\server\next.js:240:28) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\cursor\\.next\\BUILD_ID'
+}
+
+Node.js v22.16.0
+node:internal/fs/promises:633
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open 'D:\cursor\.next\BUILD_ID'
+    at async open (node:internal/fs/promises:633:25)
+    at async Object.readFile (node:internal/fs/promises:1237:14)
+    at async setupFsCheck (D:\cursor\node_modules\next\dist\server\lib\router-utils\filesystem.js:145:19)
+    at async initialize (D:\cursor\node_modules\next\dist\server\lib\router-server.js:56:23)
+    at async NextCustomServer.prepare (D:\cursor\node_modules\next\dist\server\next.js:240:28) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\cursor\\.next\\BUILD_ID'
+}
+
+Node.js v22.16.0
